@@ -123,6 +123,17 @@ header, main, form, footer {
   padding: 10px;
 }
 
+.scroll-fade {
+	background: linear-gradient(90deg, var(--background-color) 0, transparent 100%);
+	position: absolute;
+	height: 100%;
+	width: 70px;
+	top: 0;
+}
+
+#scroll-fade-right {
+	background: linear-gradient(90deg, transparent 0, var(--background-color) 100%);
+}
 .scroll-button{
   position: absolute;
   background-color: transparent;
@@ -130,6 +141,7 @@ header, main, form, footer {
   opacity: 0.9;
   height: 510px;
   padding: 20px;
+  z-index: 3;
 }
 
 .scroll-button:hover {
@@ -137,7 +149,7 @@ header, main, form, footer {
   transform: scale(1.3);
 }
 
-#button-right {
+.product-container-right {
   right: 0;
 }
 
