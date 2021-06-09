@@ -1,16 +1,17 @@
-// I do not yet have enough knowlege of JavaScript to write this code from scratch, so I most of it is copied and altered to fit my needs.
+// I do not yet have enough knowlege of JavaScript to write this code from scratch, so most of it is copied and altered to fit my needs.
 
 // scroll buttons producten
 const buttonLeft = document.getElementById('button-left');
 const buttonRight = document.getElementById('button-right');
 let productWidth = document.getElementById('product1').offsetWidth;
+let imgContainer = document.getElementById('img-container');
 
 buttonRight.onclick = function () {
-  document.getElementById('img-container').scrollLeft += productWidth;
-};
+  imgContainer.scrollLeft += productWidth;
+}
 
 buttonLeft.onclick = function () {
-  document.getElementById('img-container').scrollLeft -= productWidth;
+  imgContainer.scrollLeft -= productWidth;
 };
 
 // header verkleinen op alleen desktop 
@@ -28,3 +29,16 @@ function scrollFunction() {
     document.getElementById("nav-bar-container").style.height = "200px";
   }
 }
+
+/* WIP: fade rand en knop verbergen als je naar het eind van de container bent gescrolld*/
+/*
+
+function hideScrollFade() {
+	if (imgContainer.style.width == imgContainer.scrollLeft) {
+		document.getElementById('scroll-fade-right').display = 'hidden';
+		buttonRight.display = 'hidden';
+	}
+	console.log(imgContainer.offsetWidth);
+	console.log(imgContainer.scrollLeft);
+}
+*/
